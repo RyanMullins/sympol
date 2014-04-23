@@ -1,4 +1,4 @@
-seldom
+Sympol
 ======
 
-A framework for evaluating (cartographic) symbols on mobile devices.
+A simple framework for evaluating (cartographic) symbols on mobile devices.
