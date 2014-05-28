@@ -1,0 +1,34 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+// ---- Defined Constants for Sympol ----
+
+#define SEGUE_COMPREHENSION_ASSOCIATION @"ComprehensionAssociationSegue"
+#define SEGUE_TASK_SEARCH @"TaskSearchSegue"
+#define SEGUE_TASK_SEARCH_CERTAINTY @"TaskSearchCertaintySegue"
+#define SEGUE_UNWIND_EVALUATION @"unwindToEvaluation"
+
+#define SYMBOL_KEY_AUTHOR @"author"
+#define SYMBOL_KEY_CREATED @"created"
+#define SYMBOL_KEY_UID @"uid"
+#define SYMBOL_KEY_IMAGEPATH @"imagePath"
+#define SYMBOL_KEY_KEYWORDS @"keywords"
+#define SYMBOL_KEY_LICENSE @"license"
+#define SYMBOL_KEY_MEANING @"meaning"
+#define SYMBOL_KEY_NAME @"name"
+#define SYMBOL_KEY_SET @"set"

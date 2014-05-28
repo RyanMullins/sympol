@@ -1,0 +1,144 @@
+{
+    "evaluationInfo" : {
+        "researcher" : "Ryan S Mullins",
+        "email" : "RyanMullins@psu.edu",
+        "title" : "Simple Sympol Demo",
+        "description" : "This is a sample evaluation used to demonstrate how to configuration and run an evaluation with Sympol."
+    },
+    "experiments" : [
+        {
+             "type" : "ComprehensionAssociation",
+             "directions" : "You will be presented with a symbol. In the text box below, enter the meaning you associate with that symbol. Indicate how certain you are that this is the correct meaning for this symbol in the next box. Then press the submit button. You will do this for 5 symbols.",
+             "symbols" : [
+                {
+                    "author" : "Josua E Stevens",
+                    "created" : "2012-11-01",
+                    "uid" : "PSU1",
+                    "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym1.png",
+                    "keywords" : "biohazard, biological hazard, hazards",
+                    "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                    "meaning" : "Biological hazard",
+                    "name" : "Biohazard",
+                    "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+                },
+                {
+                    "author" : "Josua E Stevens",
+                    "created" : "2012-11-01",
+                    "uid" : "PSU2",
+                    "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym2.png",
+                    "keywords" : "explosion, bomb, IED",
+                    "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                    "meaning" : "Bomb",
+                    "name" : "Bomb",
+                    "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+                },
+                {
+                    "author" : "Josua E Stevens",
+                    "created" : "2012-11-01",
+                    "uid" : "PSU3",
+                    "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym3.png",
+                    "keywords" : "chemical spill, chemicals, science",
+                    "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                    "meaning" : "Chemical Spill",
+                    "name" : "Chemical Spill",
+                    "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+                },
+                {
+                    "author" : "Josua E Stevens",
+                    "created" : "2012-11-01",
+                    "uid" : "PSU4",
+                    "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym4.png",
+                    "keywords" : "fire, burning",
+                    "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                    "meaning" : "Fire",
+                    "name" : "Fire",
+                    "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+                },
+                {
+                    "author" : "Josua E Stevens",
+                    "created" : "2012-11-01",
+                    "uid" : "PSU5",
+                    "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym5.png",
+                    "keywords" : "riot, civil unrest",
+                    "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                    "meaning" : "Riot",
+                    "name" : "Riot",
+                    "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+                }
+            ]
+        },
+        {
+             "type" : "TaskSearch",
+             "directions" : "Find the symbol on the map that corresponds to a biological hazard. When you find the symbol, tap on it and record how certain you are that it is the correct symbol.",
+             "symbolsOnMap" : 9,
+             "targetSymbol" : {
+                "author" : "Josua E Stevens",
+                "created" : "2012-11-01",
+                "uid" : "PSU1",
+                "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym1.png",
+                "keywords" : "biohazard, biological hazard, hazards",
+                "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+                "meaning" : "Biological hazard",
+                "name" : "Biohazard",
+                "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+            }
+        }
+    ],
+    "symbols" : [
+        {
+            "author" : "Josua E Stevens",
+            "created" : "2012-11-01",
+            "uid" : "PSU1",
+            "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym1.png",
+            "keywords" : "biohazard, biological hazard, hazards",
+            "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+            "meaning" : "Biological hazard",
+            "name" : "Biohazard",
+            "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+        },
+        {
+            "author" : "Josua E Stevens",
+            "created" : "2012-11-01",
+            "uid" : "PSU2",
+            "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym2.png",
+            "keywords" : "explosion, bomb, IED",
+            "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+            "meaning" : "Bomb",
+            "name" : "Bomb",
+            "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+        },
+        {
+            "author" : "Josua E Stevens",
+            "created" : "2012-11-01",
+            "uid" : "PSU3",
+            "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym3.png",
+            "keywords" : "chemical spill, chemicals, science",
+            "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+            "meaning" : "Chemical Spill",
+            "name" : "Chemical Spill",
+            "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+        },
+        {
+            "author" : "Josua E Stevens",
+            "created" : "2012-11-01",
+            "uid" : "PSU4",
+            "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym4.png",
+            "keywords" : "fire, burning",
+            "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+            "meaning" : "Fire",
+            "name" : "Fire",
+            "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+        },
+        {
+            "author" : "Josua E Stevens",
+            "created" : "2012-11-01",
+            "uid" : "PSU5",
+            "imagePath" : "http://ryanmullins.github.io/sympol/test/img/sym5.png",
+            "keywords" : "riot, civil unrest",
+            "license" : "Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported",
+            "meaning" : "Riot",
+            "name" : "Riot",
+            "set" : "Penn State GeoVISTA Center Mobile Symbology Set"
+        }
+    ]
+}

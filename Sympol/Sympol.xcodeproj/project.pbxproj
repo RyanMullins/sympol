@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE4813A41927DA2E0003731A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4813A31927DA2E0003731A /* MapKit.framework */; };
+		BE4813AD192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4813AC192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.m */; };
+		BE872AB5191A9E4A00BCC4B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872AB4191A9E4A00BCC4B1 /* Foundation.framework */; };
+		BE872AB7191A9E4A00BCC4B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872AB6191A9E4A00BCC4B1 /* CoreGraphics.framework */; };
+		BE872AB9191A9E4A00BCC4B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872AB8191A9E4A00BCC4B1 /* UIKit.framework */; };
+		BE872ABF191A9E4A00BCC4B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE872ABD191A9E4A00BCC4B1 /* InfoPlist.strings */; };
+		BE872AC1191A9E4A00BCC4B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AC0191A9E4A00BCC4B1 /* main.m */; };
+		BE872AC5191A9E4A00BCC4B1 /* SYMPOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AC4191A9E4A00BCC4B1 /* SYMPOLAppDelegate.m */; };
+		BE872AC7191A9E4A00BCC4B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE872AC6191A9E4A00BCC4B1 /* Images.xcassets */; };
+		BE872ACE191A9E4B00BCC4B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872ACD191A9E4B00BCC4B1 /* XCTest.framework */; };
+		BE872ACF191A9E4B00BCC4B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872AB4191A9E4A00BCC4B1 /* Foundation.framework */; };
+		BE872AD0191A9E4B00BCC4B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE872AB8191A9E4A00BCC4B1 /* UIKit.framework */; };
+		BE872AD8191A9E4B00BCC4B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE872AD6191A9E4B00BCC4B1 /* InfoPlist.strings */; };
+		BE872ADA191A9E4B00BCC4B1 /* SympolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AD9191A9E4B00BCC4B1 /* SympolTests.m */; };
+		BE872AEC1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AEB1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.m */; };
+		BE872AEF1923CC5600BCC4B1 /* SYMPOLSymbolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AEE1923CC5600BCC4B1 /* SYMPOLSymbolModel.m */; };
+		BE872AF21923CC6700BCC4B1 /* SYMPOLEvaluationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AF11923CC6700BCC4B1 /* SYMPOLEvaluationModel.m */; };
+		BE872AF51923CC8800BCC4B1 /* SYMPOLEvaluationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AF41923CC8800BCC4B1 /* SYMPOLEvaluationController.m */; };
+		BE872AF81924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AF71924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.m */; };
+		BE872AFF1924276900BCC4B1 /* SYMPOLTaskSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872AFE1924276900BCC4B1 /* SYMPOLTaskSearchModel.m */; };
+		BE872B0219250A6400BCC4B1 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = BE872B0119250A6400BCC4B1 /* config.json */; };
+		BE872B0419251F6E00BCC4B1 /* Evaluation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE872B0319251F6E00BCC4B1 /* Evaluation.storyboard */; };
+		BE872B0719252BE700BCC4B1 /* SYMPOLTaskSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE872B0619252BE700BCC4B1 /* SYMPOLTaskSearchController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE872AD1191A9E4B00BCC4B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE872AA9191A9E4A00BCC4B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE872AB0191A9E4A00BCC4B1;
+			remoteInfo = Sympol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE4813A31927DA2E0003731A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BE4813AB192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLTaskSearchCertaintyController.h; sourceTree = "<group>"; };
+		BE4813AC192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLTaskSearchCertaintyController.m; sourceTree = "<group>"; };
+		BE872AB1191A9E4A00BCC4B1 /* Sympol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sympol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE872AB4191A9E4A00BCC4B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE872AB6191A9E4A00BCC4B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE872AB8191A9E4A00BCC4B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE872ABC191A9E4A00BCC4B1 /* Sympol-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sympol-Info.plist"; sourceTree = "<group>"; };
+		BE872ABE191A9E4A00BCC4B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE872AC0191A9E4A00BCC4B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE872AC2191A9E4A00BCC4B1 /* Sympol-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sympol-Prefix.pch"; sourceTree = "<group>"; };
+		BE872AC3191A9E4A00BCC4B1 /* SYMPOLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMPOLAppDelegate.h; sourceTree = "<group>"; };
+		BE872AC4191A9E4A00BCC4B1 /* SYMPOLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMPOLAppDelegate.m; sourceTree = "<group>"; };
+		BE872AC6191A9E4A00BCC4B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE872ACC191A9E4B00BCC4B1 /* SympolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SympolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE872ACD191A9E4B00BCC4B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BE872AD5191A9E4B00BCC4B1 /* SympolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SympolTests-Info.plist"; sourceTree = "<group>"; };
+		BE872AD7191A9E4B00BCC4B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE872AD9191A9E4B00BCC4B1 /* SympolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SympolTests.m; sourceTree = "<group>"; };
+		BE872AE71923C91C00BCC4B1 /* SYMPOLComprehensionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMPOLComprehensionProtocol.h; sourceTree = "<group>"; };
+		BE872AE81923C93000BCC4B1 /* SYMPOLTaskProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMPOLTaskProtocol.h; sourceTree = "<group>"; };
+		BE872AEA1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLComprehensionAssociationController.h; sourceTree = "<group>"; };
+		BE872AEB1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLComprehensionAssociationController.m; sourceTree = "<group>"; };
+		BE872AED1923CC5600BCC4B1 /* SYMPOLSymbolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLSymbolModel.h; sourceTree = "<group>"; };
+		BE872AEE1923CC5600BCC4B1 /* SYMPOLSymbolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLSymbolModel.m; sourceTree = "<group>"; };
+		BE872AF01923CC6700BCC4B1 /* SYMPOLEvaluationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLEvaluationModel.h; sourceTree = "<group>"; };
+		BE872AF11923CC6700BCC4B1 /* SYMPOLEvaluationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLEvaluationModel.m; sourceTree = "<group>"; };
+		BE872AF31923CC8800BCC4B1 /* SYMPOLEvaluationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLEvaluationController.h; sourceTree = "<group>"; };
+		BE872AF41923CC8800BCC4B1 /* SYMPOLEvaluationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLEvaluationController.m; sourceTree = "<group>"; };
+		BE872AF61924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLComprehensionAssociationModel.h; sourceTree = "<group>"; };
+		BE872AF71924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLComprehensionAssociationModel.m; sourceTree = "<group>"; };
+		BE872AFC192403E200BCC4B1 /* SYMPOLExperimentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMPOLExperimentProtocol.h; sourceTree = "<group>"; };
+		BE872AFD1924276900BCC4B1 /* SYMPOLTaskSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLTaskSearchModel.h; sourceTree = "<group>"; };
+		BE872AFE1924276900BCC4B1 /* SYMPOLTaskSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLTaskSearchModel.m; sourceTree = "<group>"; };
+		BE872B0119250A6400BCC4B1 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		BE872B0319251F6E00BCC4B1 /* Evaluation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Evaluation.storyboard; sourceTree = "<group>"; };
+		BE872B0519252BE700BCC4B1 /* SYMPOLTaskSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMPOLTaskSearchController.h; sourceTree = "<group>"; };
+		BE872B0619252BE700BCC4B1 /* SYMPOLTaskSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMPOLTaskSearchController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE872AAE191A9E4A00BCC4B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872AB7191A9E4A00BCC4B1 /* CoreGraphics.framework in Frameworks */,
+				BE872AB9191A9E4A00BCC4B1 /* UIKit.framework in Frameworks */,
+				BE4813A41927DA2E0003731A /* MapKit.framework in Frameworks */,
+				BE872AB5191A9E4A00BCC4B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE872AC9191A9E4B00BCC4B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872ACE191A9E4B00BCC4B1 /* XCTest.framework in Frameworks */,
+				BE872AD0191A9E4B00BCC4B1 /* UIKit.framework in Frameworks */,
+				BE872ACF191A9E4B00BCC4B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE872AA8191A9E4A00BCC4B1 = {
+			isa = PBXGroup;
+			children = (
+				BE872ABA191A9E4A00BCC4B1 /* Sympol */,
+				BE872AD3191A9E4B00BCC4B1 /* SympolTests */,
+				BE872AB3191A9E4A00BCC4B1 /* Frameworks */,
+				BE872AB2191A9E4A00BCC4B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE872AB2191A9E4A00BCC4B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AB1191A9E4A00BCC4B1 /* Sympol.app */,
+				BE872ACC191A9E4B00BCC4B1 /* SympolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE872AB3191A9E4A00BCC4B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE4813A31927DA2E0003731A /* MapKit.framework */,
+				BE872AB4191A9E4A00BCC4B1 /* Foundation.framework */,
+				BE872AB6191A9E4A00BCC4B1 /* CoreGraphics.framework */,
+				BE872AB8191A9E4A00BCC4B1 /* UIKit.framework */,
+				BE872ACD191A9E4B00BCC4B1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE872ABA191A9E4A00BCC4B1 /* Sympol */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AE61923C81500BCC4B1 /* Protocols */,
+				BE872AE5191A9E6F00BCC4B1 /* Controllers */,
+				BE872AE4191A9E6900BCC4B1 /* Views */,
+				BE872AE3191A9E5E00BCC4B1 /* Models */,
+				BE872AC3191A9E4A00BCC4B1 /* SYMPOLAppDelegate.h */,
+				BE872AC4191A9E4A00BCC4B1 /* SYMPOLAppDelegate.m */,
+				BE872AC6191A9E4A00BCC4B1 /* Images.xcassets */,
+				BE872ABB191A9E4A00BCC4B1 /* Supporting Files */,
+			);
+			path = Sympol;
+			sourceTree = "<group>";
+		};
+		BE872ABB191A9E4A00BCC4B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE872ABC191A9E4A00BCC4B1 /* Sympol-Info.plist */,
+				BE872ABD191A9E4A00BCC4B1 /* InfoPlist.strings */,
+				BE872AC0191A9E4A00BCC4B1 /* main.m */,
+				BE872AC2191A9E4A00BCC4B1 /* Sympol-Prefix.pch */,
+				BE872B0119250A6400BCC4B1 /* config.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE872AD3191A9E4B00BCC4B1 /* SympolTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AD9191A9E4B00BCC4B1 /* SympolTests.m */,
+				BE872AD4191A9E4B00BCC4B1 /* Supporting Files */,
+			);
+			path = SympolTests;
+			sourceTree = "<group>";
+		};
+		BE872AD4191A9E4B00BCC4B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AD5191A9E4B00BCC4B1 /* SympolTests-Info.plist */,
+				BE872AD6191A9E4B00BCC4B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE872AE3191A9E5E00BCC4B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AED1923CC5600BCC4B1 /* SYMPOLSymbolModel.h */,
+				BE872AEE1923CC5600BCC4B1 /* SYMPOLSymbolModel.m */,
+				BE872AF01923CC6700BCC4B1 /* SYMPOLEvaluationModel.h */,
+				BE872AF11923CC6700BCC4B1 /* SYMPOLEvaluationModel.m */,
+				BE872AF61924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.h */,
+				BE872AF71924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.m */,
+				BE872AFD1924276900BCC4B1 /* SYMPOLTaskSearchModel.h */,
+				BE872AFE1924276900BCC4B1 /* SYMPOLTaskSearchModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE872AE4191A9E6900BCC4B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE872B0319251F6E00BCC4B1 /* Evaluation.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BE872AE5191A9E6F00BCC4B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AEA1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.h */,
+				BE872AEB1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.m */,
+				BE872AF31923CC8800BCC4B1 /* SYMPOLEvaluationController.h */,
+				BE872AF41923CC8800BCC4B1 /* SYMPOLEvaluationController.m */,
+				BE872B0519252BE700BCC4B1 /* SYMPOLTaskSearchController.h */,
+				BE872B0619252BE700BCC4B1 /* SYMPOLTaskSearchController.m */,
+				BE4813AB192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.h */,
+				BE4813AC192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BE872AE61923C81500BCC4B1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BE872AFC192403E200BCC4B1 /* SYMPOLExperimentProtocol.h */,
+				BE872AE71923C91C00BCC4B1 /* SYMPOLComprehensionProtocol.h */,
+				BE872AE81923C93000BCC4B1 /* SYMPOLTaskProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE872AB0191A9E4A00BCC4B1 /* Sympol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE872ADD191A9E4B00BCC4B1 /* Build configuration list for PBXNativeTarget "Sympol" */;
+			buildPhases = (
+				BE872AAD191A9E4A00BCC4B1 /* Sources */,
+				BE872AAE191A9E4A00BCC4B1 /* Frameworks */,
+				BE872AAF191A9E4A00BCC4B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sympol;
+			productName = Sympol;
+			productReference = BE872AB1191A9E4A00BCC4B1 /* Sympol.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE872ACB191A9E4B00BCC4B1 /* SympolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE872AE0191A9E4B00BCC4B1 /* Build configuration list for PBXNativeTarget "SympolTests" */;
+			buildPhases = (
+				BE872AC8191A9E4B00BCC4B1 /* Sources */,
+				BE872AC9191A9E4B00BCC4B1 /* Frameworks */,
+				BE872ACA191A9E4B00BCC4B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE872AD2191A9E4B00BCC4B1 /* PBXTargetDependency */,
+			);
+			name = SympolTests;
+			productName = SympolTests;
+			productReference = BE872ACC191A9E4B00BCC4B1 /* SympolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE872AA9191A9E4A00BCC4B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SYMPOL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = org.ryanmullins;
+				TargetAttributes = {
+					BE872AB0191A9E4A00BCC4B1 = {
+						DevelopmentTeam = YRKCJTYPBB;
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					BE872ACB191A9E4B00BCC4B1 = {
+						TestTargetID = BE872AB0191A9E4A00BCC4B1;
+					};
+				};
+			};
+			buildConfigurationList = BE872AAC191A9E4A00BCC4B1 /* Build configuration list for PBXProject "Sympol" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE872AA8191A9E4A00BCC4B1;
+			productRefGroup = BE872AB2191A9E4A00BCC4B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE872AB0191A9E4A00BCC4B1 /* Sympol */,
+				BE872ACB191A9E4B00BCC4B1 /* SympolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE872AAF191A9E4A00BCC4B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872ABF191A9E4A00BCC4B1 /* InfoPlist.strings in Resources */,
+				BE872B0419251F6E00BCC4B1 /* Evaluation.storyboard in Resources */,
+				BE872AC7191A9E4A00BCC4B1 /* Images.xcassets in Resources */,
+				BE872B0219250A6400BCC4B1 /* config.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE872ACA191A9E4B00BCC4B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872AD8191A9E4B00BCC4B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE872AAD191A9E4A00BCC4B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872AFF1924276900BCC4B1 /* SYMPOLTaskSearchModel.m in Sources */,
+				BE872AF81924006900BCC4B1 /* SYMPOLComprehensionAssociationModel.m in Sources */,
+				BE4813AD192BCC2D0003731A /* SYMPOLTaskSearchCertaintyController.m in Sources */,
+				BE872AC5191A9E4A00BCC4B1 /* SYMPOLAppDelegate.m in Sources */,
+				BE872B0719252BE700BCC4B1 /* SYMPOLTaskSearchController.m in Sources */,
+				BE872AEF1923CC5600BCC4B1 /* SYMPOLSymbolModel.m in Sources */,
+				BE872AEC1923CC1E00BCC4B1 /* SYMPOLComprehensionAssociationController.m in Sources */,
+				BE872AF21923CC6700BCC4B1 /* SYMPOLEvaluationModel.m in Sources */,
+				BE872AF51923CC8800BCC4B1 /* SYMPOLEvaluationController.m in Sources */,
+				BE872AC1191A9E4A00BCC4B1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE872AC8191A9E4B00BCC4B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE872ADA191A9E4B00BCC4B1 /* SympolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE872AD2191A9E4B00BCC4B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE872AB0191A9E4A00BCC4B1 /* Sympol */;
+			targetProxy = BE872AD1191A9E4B00BCC4B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE872ABD191A9E4A00BCC4B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE872ABE191A9E4A00BCC4B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE872AD6191A9E4B00BCC4B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE872AD7191A9E4B00BCC4B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE872ADB191A9E4B00BCC4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE872ADC191A9E4B00BCC4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE872ADE191A9E4B00BCC4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sympol/Sympol-Prefix.pch";
+				INFOPLIST_FILE = "Sympol/Sympol-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE872ADF191A9E4B00BCC4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sympol/Sympol-Prefix.pch";
+				INFOPLIST_FILE = "Sympol/Sympol-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BE872AE1191A9E4B00BCC4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sympol.app/Sympol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sympol/Sympol-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SympolTests/SympolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BE872AE2191A9E4B00BCC4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sympol.app/Sympol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sympol/Sympol-Prefix.pch";
+				INFOPLIST_FILE = "SympolTests/SympolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE872AAC191A9E4A00BCC4B1 /* Build configuration list for PBXProject "Sympol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE872ADB191A9E4B00BCC4B1 /* Debug */,
+				BE872ADC191A9E4B00BCC4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE872ADD191A9E4B00BCC4B1 /* Build configuration list for PBXNativeTarget "Sympol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE872ADE191A9E4B00BCC4B1 /* Debug */,
+				BE872ADF191A9E4B00BCC4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE872AE0191A9E4B00BCC4B1 /* Build configuration list for PBXNativeTarget "SympolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE872AE1191A9E4B00BCC4B1 /* Debug */,
+				BE872AE2191A9E4B00BCC4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE872AA9191A9E4A00BCC4B1 /* Project object */;
+}
