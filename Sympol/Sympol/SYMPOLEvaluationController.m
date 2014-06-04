@@ -112,6 +112,9 @@
     [self.experimentTitleLabel setTextColor:[UIColor whiteColor]];
     [self.directionsTextField setText:self.evaluation.currentExperiment.directions];
     [self.directionsTextField setTextColor:[UIColor whiteColor]];
+    [self.progressButton setTitle:@"Start Experiment" forState:UIControlStateNormal];
+    [self.progressButton setTitle:@"Start Experiment" forState:UIControlStateHighlighted];
+    [self.progressButton setTitle:@"Start Experiment" forState:UIControlStateSelected];
 }
 
 - (void) defaultTitlesAndDirections {
@@ -119,6 +122,9 @@
     [self.experimentTitleLabel setTextColor:[UIColor whiteColor]];
     [self.directionsTextField setText:[self.evaluation.evaulationInfo objectForKey:@"description"]];
     [self.directionsTextField setTextColor:[UIColor whiteColor]];
+    [self.progressButton setTitle:@"Begin Evaluation" forState:UIControlStateNormal];
+    [self.progressButton setTitle:@"Begin Evaluation" forState:UIControlStateHighlighted];
+    [self.progressButton setTitle:@"Begin Evaluation" forState:UIControlStateSelected];
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate Methods

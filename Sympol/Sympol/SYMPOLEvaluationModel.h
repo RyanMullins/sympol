@@ -15,7 +15,7 @@
 @property (nonatomic, readonly) NSArray * experiments;
 @property (nonatomic, readonly) NSArray * symbols;
 @property (nonatomic, readonly) NSDictionary * evaulationInfo;
-@property (nonatomic, readonly) id<SYMPOLExperimentProtocol> currentExperiment;
+@property (nonatomic, readonly) id<SYMPOLExperiment> currentExperiment;
 
 + (SYMPOLEvaluationModel *) evaluationFromJSONObject:(NSDictionary *)json;
 + (SYMPOLEvaluationModel *) sharedEvaluationModel;

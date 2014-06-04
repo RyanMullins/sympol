@@ -40,6 +40,7 @@
                                 </state>
                                 <connections>
                                     <action selector="progressExperiment:" destination="kV8-IN-yXm" eventType="valueChanged" id="8P5-6Z-YSS"/>
+                                    <action selector="progressExperiment:" destination="kV8-IN-yXm" eventType="touchUpInside" id="y2c-hm-0LV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Evaluation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhS-aW-kn1" userLabel="ExperimentTitle">
@@ -66,8 +67,8 @@
                         <outlet property="directionsTextField" destination="IzI-YN-rQO" id="tIp-bJ-rWz"/>
                         <outlet property="experimentTitleLabel" destination="hhS-aW-kn1" id="kwJ-Eq-LKn"/>
                         <outlet property="progressButton" destination="Ccc-hM-uzJ" id="8FO-6q-orn"/>
-                        <segue destination="Wsr-VL-iV8" kind="push" identifier="TaskSearchSegue" id="NBt-Tu-VvM"/>
-                        <segue destination="yVT-L0-Gx9" kind="push" identifier="ComprehensionAssociationSegue" id="gNT-yJ-6Y2"/>
+                        <segue destination="Wsr-VL-iV8" kind="modal" identifier="TaskSearchSegue" id="NBt-Tu-VvM"/>
+                        <segue destination="yVT-L0-Gx9" kind="modal" identifier="ComprehensionAssociationSegue" id="gNT-yJ-6Y2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCK-3b-5Er" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,7 +106,7 @@
                     <connections>
                         <outlet property="map" destination="G5p-QN-WCX" id="YF8-ec-bcG"/>
                         <segue destination="npx-Xd-R6P" kind="unwind" identifier="unwindToEvaluation" unwindAction="unwindToEvaluation:" id="lkc-rd-PVg"/>
-                        <segue destination="6ou-Sl-Rce" kind="push" identifier="TaskSearchCertaintySegue" id="IOk-S8-Tr1"/>
+                        <segue destination="6ou-Sl-Rce" kind="modal" identifier="TaskSearchCertaintySegue" modalTransitionStyle="flipHorizontal" id="IOk-S8-Tr1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FML-WW-R7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,12 +136,12 @@
                                 <rect key="frame" x="20" y="518" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Submit Selection">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitAnswer:" destination="6ou-Sl-Rce" eventType="valueChanged" id="beM-dM-IJx"/>
+                                    <action selector="submitAnswer:" destination="6ou-Sl-Rce" eventType="touchUpInside" id="sMI-a1-dXr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How certain are you that you have selected the correct symbol?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-2e-ais">
@@ -150,11 +151,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-M3-fwH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-M3-fwH">
                                 <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6ou-Sl-Rce" id="i3S-RG-F5N"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Give your response as a number between 0 and 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjd-LN-rP6">
                                 <rect key="frame" x="20" y="307" width="280" height="21"/>
@@ -206,7 +210,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="associateMeaning:" destination="yVT-L0-Gx9" eventType="valueChanged" id="clz-tb-j7a"/>
+                                    <action selector="associateMeaning:" destination="yVT-L0-Gx9" eventType="touchUpInside" id="Bjy-fY-hnr"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iby-Wi-HUS" userLabel="SymbolView">
@@ -219,12 +223,18 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yVT-L0-Gx9" id="wyS-uU-wZX"/>
+                                </connections>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buV-S2-aw4" userLabel="CertaintyTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buV-S2-aw4" userLabel="CertaintyTextField">
                                 <rect key="frame" x="225" y="480" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yVT-L0-Gx9" id="Oef-Xw-4KU"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How certain are you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-fD-EFH" userLabel="CertaintyLabel">
                                 <rect key="frame" x="20" y="483" width="150" height="24"/>

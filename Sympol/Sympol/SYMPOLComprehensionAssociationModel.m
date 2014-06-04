@@ -29,7 +29,7 @@
 @synthesize type;
 
 - (BOOL) isLastSymbol {
-    return (self.symbolIndex < ([self.symbols count] - 1));
+    return (self.symbolIndex == ([self.symbols count] - 1));
 }
 
 - (void) associateMeaning {
@@ -47,7 +47,7 @@
     }
 }
 
-#pragma mark - Experiment Protocol Mehtods
+#pragma mark - Experiment Protocol Methods
 
 - (void) reset {
     self.symbol = nil;
@@ -76,7 +76,7 @@
         model.directions = [json objectForKey:@"directions"];
         model.symbolIndex = -1;
         model.symbols = [[NSArray alloc] initWithArray:tempSymbols];
-        model.title = ([json objectForKey:@"title"] ? [json objectForKey:@"title"] : @"Associatiing a Meaning");
+        model.title = ([json objectForKey:@"title"] ? [json objectForKey:@"title"] : @"Associating a Meaning");
         model.type = @"ComprehensionAssociation";
     }
     

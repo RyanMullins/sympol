@@ -10,7 +10,7 @@
 #import "SYMPOLExperimentProtocol.h"
 #import "SYMPOLSymbolModel.h"
 
-@protocol SYMPOLComprehensionProtocol <SYMPOLExperimentProtocol>
+@protocol SYMPOLComprehension <SYMPOLExperiment>
 
 @property (nonatomic) SYMPOLSymbolModel * symbol;
 @property (nonatomic) NSString * meaning;

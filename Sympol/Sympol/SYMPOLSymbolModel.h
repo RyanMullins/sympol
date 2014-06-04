@@ -10,7 +10,7 @@
 @import CoreLocation;
 @import MapKit;
 
-@interface SYMPOLSymbolModel : NSObject <MKAnnotation>
+@interface SYMPOLSymbolModel : NSObject <NSCopying, MKAnnotation>
 
 @property (nonatomic) NSString * author;
 @property (nonatomic) NSString * created;
@@ -19,9 +19,12 @@
 @property (nonatomic) NSString * license;
 @property (nonatomic) NSString * meaning;
 @property (nonatomic) NSString * name;
-@property (nonatomic) NSString * set;
+@property (nonatomic) NSString * symbolSet;
 @property (nonatomic) NSString * uid;
 @property (nonatomic) UIImage * image;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+
+- (id) copyWithZone:(NSZone *)zone;
 
 + (SYMPOLSymbolModel *) symbolFromJSONObject:(NSDictionary *) json;
 + (NSDictionary *) JSONObjectFromSymbol:(SYMPOLSymbolModel *) symbol;

@@ -18,7 +18,7 @@ static SYMPOLEvaluationModel * evaluation = nil;
 @property (nonatomic, readwrite) NSArray * experiments;
 @property (nonatomic, readwrite) NSArray * symbols;
 @property (nonatomic, readwrite) NSDictionary * evaulationInfo;
-@property (nonatomic, readwrite) id<SYMPOLExperimentProtocol> currentExperiment;
+@property (nonatomic, readwrite) id<SYMPOLExperiment> currentExperiment;
 @property (nonatomic) NSMutableArray * results;
 @property NSUInteger indexOfCurrentExperiment;
 
@@ -35,7 +35,7 @@ static SYMPOLEvaluationModel * evaluation = nil;
 #pragma mark - Instance Methods
 
 - (BOOL) isLastExperiment {
-    return (indexOfCurrentExperiment < ([self.experiments count] - 1));
+    return (indexOfCurrentExperiment == ([self.experiments count] - 1));
 }
 
 - (NSDictionary *) resultsJSONObject {
@@ -44,8 +44,11 @@ static SYMPOLEvaluationModel * evaluation = nil;
 
 - (void) experimentCompleted {
     [self.results addObject:[self.currentExperiment results]];
-    self.indexOfCurrentExperiment++;
-    self.currentExperiment = [self.experiments objectAtIndex:self.indexOfCurrentExperiment];
+    
+    if (!self.isLastExperiment) {
+        self.indexOfCurrentExperiment++;
+        self.currentExperiment = [self.experiments objectAtIndex:self.indexOfCurrentExperiment];
+    }
 }
 
 - (void) reset {
@@ -56,14 +59,14 @@ static SYMPOLEvaluationModel * evaluation = nil;
 
 #pragma mark - Initialization
 
-+ (id <SYMPOLExperimentProtocol>) experimentFromJSONObject:(NSDictionary *)json {
-    id <SYMPOLExperimentProtocol> model;
++ (id <SYMPOLExperiment>) experimentFromJSONObject:(NSDictionary *)json {
+    id <SYMPOLExperiment> model;
     
     if ([[json objectForKey:@"type"] isEqualToString:@"ComprehensionAssociation"]) {
         model = [SYMPOLComprehensionAssociationModel modelFromJSONObject:json];
     }
     
-    if ([[json objectForKey:@"type"] isEqualToString:@"SearchTask"]) {
+    if ([[json objectForKey:@"type"] isEqualToString:@"TaskSearch"]) {
         model = [SYMPOLTaskSearchModel modelFromJSONObject:json];
     }
     
@@ -75,20 +78,26 @@ static SYMPOLEvaluationModel * evaluation = nil;
     NSMutableArray * symbolModels = [[NSMutableArray alloc] init];
     
     for (NSDictionary * experiment in [json objectForKey:@"experiments"]) {
-        id <SYMPOLExperimentProtocol> experimentModel = [SYMPOLEvaluationModel experimentFromJSONObject:experiment];
-        [experimentModels addObject:experimentModel];
+        id <SYMPOLExperiment> experimentModel = [SYMPOLEvaluationModel experimentFromJSONObject:experiment];
+        
+        if (experimentModel) {
+            [experimentModels addObject:experimentModel];
+        }
     }
     
     for (NSDictionary * symbol in [json objectForKey:@"symbols"]) {
         SYMPOLSymbolModel * symbolModel = [SYMPOLSymbolModel symbolFromJSONObject:symbol];
-        [symbolModels addObject:symbolModel];
+        
+        if (symbolModel) {
+            [symbolModels addObject:symbolModel];
+        }
     }
     
     evaluation = [[SYMPOLEvaluationModel alloc] init];
-    evaluation.currentExperiment = [experimentModels objectAtIndex:0];
-    evaluation.evaulationInfo = [[NSDictionary alloc] initWithDictionary:[json objectForKey:@"evaulationInfo"]];
-    evaluation.experiments = [[NSArray alloc] initWithArray:experimentModels];
     evaluation.indexOfCurrentExperiment = 0;
+    evaluation.currentExperiment = [experimentModels objectAtIndex:evaluation.indexOfCurrentExperiment];
+    evaluation.evaulationInfo = [[NSDictionary alloc] initWithDictionary:[json objectForKey:@"evaluationInfo"]];
+    evaluation.experiments = [[NSArray alloc] initWithArray:experimentModels];
     evaluation.results = [[NSMutableArray alloc] init];
     evaluation.symbols = [[NSArray alloc] initWithArray:symbolModels];
     

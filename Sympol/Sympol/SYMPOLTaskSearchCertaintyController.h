@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYMPOLTaskSearchCertaintyController : UIViewController
+@interface SYMPOLTaskSearchCertaintyController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) IBOutlet UIButton * submitButton;
 @property (nonatomic) IBOutlet UILabel * certaintyLabel;

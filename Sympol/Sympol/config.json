@@ -3,7 +3,7 @@
         "researcher" : "Ryan S Mullins",
         "email" : "RyanMullins@psu.edu",
         "title" : "Simple Sympol Demo",
-        "description" : "This is a sample evaluation used to demonstrate how to configuration and run an evaluation with Sympol."
+        "description" : "This is a sample used to demonstrate how to configure and run an evaluation with Sympol."
     },
     "experiments" : [
         {

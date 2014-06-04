@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol SYMPOLExperimentProtocol <NSObject>
+@protocol SYMPOLExperiment <NSObject>
 
 @property (nonatomic) NSNumber * certainty;
 @property (nonatomic) NSString * directions;

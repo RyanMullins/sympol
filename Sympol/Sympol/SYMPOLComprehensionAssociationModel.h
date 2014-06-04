@@ -10,7 +10,7 @@
 
 #import "SYMPOLComprehensionProtocol.h"
 
-@interface SYMPOLComprehensionAssociationModel : NSObject <SYMPOLComprehensionProtocol>
+@interface SYMPOLComprehensionAssociationModel : NSObject <SYMPOLComprehension>
 
 - (BOOL) isLastSymbol;
 - (void) associateMeaning;

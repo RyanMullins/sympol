@@ -10,7 +10,7 @@
 #import "SYMPOLEvaluationModel.h"
 #import "SYMPOLComprehensionAssociationModel.h"
 
-@interface SYMPOLComprehensionAssociationController : UIViewController
+@interface SYMPOLComprehensionAssociationController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @property (nonatomic) IBOutlet UIButton * submitButton;
 @property (nonatomic) IBOutlet UILabel * rangeLabel;

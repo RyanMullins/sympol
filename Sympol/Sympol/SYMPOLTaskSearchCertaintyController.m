@@ -22,8 +22,12 @@
 @synthesize submitButton;
 
 - (void) viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
     self.model = (SYMPOLTaskSearchModel *)[[SYMPOLEvaluationModel sharedEvaluationModel] currentExperiment];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 - (void) didReceiveMemoryWarning {
@@ -33,6 +37,11 @@
 - (IBAction) submitAnswer:(id)sender {
     self.model.certainty = [NSNumber numberWithDouble:[[self.certaintyTextField text] doubleValue]];
     [self performSegueWithIdentifier:SEGUE_UNWIND_EVALUATION sender:self];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "SYMPOLTaskProtocol.h"
 
-@interface SYMPOLTaskSearchModel : NSObject <SYMPOLTaskProtocol>
+@interface SYMPOLTaskSearchModel : NSObject <SYMPOLTask>
 
 @property (nonatomic) SYMPOLSymbolModel * selectedSymbol;
 @property (nonatomic) NSNumber * elapsedTime;
+@property (nonatomic) NSNumber * symbolsOnMap;
 
 @end

@@ -10,9 +10,8 @@
 #import "SYMPOLExperimentProtocol.h"
 #import "SYMPOLSymbolModel.h"
 
-@protocol SYMPOLTaskProtocol <SYMPOLExperimentProtocol>
+@protocol SYMPOLTask <SYMPOLExperiment>
 
-@property (nonatomic) NSArray * symbols;
 @property (nonatomic) SYMPOLSymbolModel * targetSymbol;
 
 @end
