@@ -22,6 +22,8 @@ static SYMPOLEvaluationModel * evaluation = nil;
 @property (nonatomic) NSMutableArray * results;
 @property NSUInteger indexOfCurrentExperiment;
 
+- (void) shuffle;
+
 @end
 
 @implementation SYMPOLEvaluationModel
@@ -53,8 +55,22 @@ static SYMPOLEvaluationModel * evaluation = nil;
 
 - (void) reset {
     [self.results removeAllObjects];
+    [self shuffle];
     self.indexOfCurrentExperiment = 0;
     self.currentExperiment = [self.experiments objectAtIndex:self.indexOfCurrentExperiment];
+}
+
+- (void) shuffle {
+    NSInteger count = [self.experiments count];
+    NSMutableArray * exps = [NSMutableArray arrayWithArray:self.experiments];
+    
+    for (NSUInteger i = 0; i < count; ++i) {
+        NSInteger remainingCount = count - i;
+        NSInteger exchangeIndex = i + arc4random_uniform(remainingCount);
+        [exps exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
+    }
+    
+    self.experiments = [NSArray arrayWithArray:exps];
 }
 
 #pragma mark - Initialization
@@ -94,12 +110,15 @@ static SYMPOLEvaluationModel * evaluation = nil;
     }
     
     evaluation = [[SYMPOLEvaluationModel alloc] init];
+    evaluation.evaulationInfo = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[json objectForKey:@"evaluationInfo"]];
+    evaluation.experiments = [NSArray arrayWithArray:experimentModels];
+    evaluation.symbols = [[NSArray alloc] initWithArray:symbolModels];
+    
+    [evaluation shuffle];
+    
     evaluation.indexOfCurrentExperiment = 0;
     evaluation.currentExperiment = [experimentModels objectAtIndex:evaluation.indexOfCurrentExperiment];
-    evaluation.evaulationInfo = [[NSDictionary alloc] initWithDictionary:[json objectForKey:@"evaluationInfo"]];
-    evaluation.experiments = [[NSArray alloc] initWithArray:experimentModels];
     evaluation.results = [[NSMutableArray alloc] init];
-    evaluation.symbols = [[NSArray alloc] initWithArray:symbolModels];
     
     return evaluation;
 }
