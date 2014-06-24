@@ -112,7 +112,7 @@ static SYMPOLEvaluationModel * evaluation = nil;
     evaluation = [[SYMPOLEvaluationModel alloc] init];
     evaluation.evaulationInfo = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[json objectForKey:@"evaluationInfo"]];
     evaluation.experiments = [NSArray arrayWithArray:experimentModels];
-    evaluation.symbols = [[NSArray alloc] initWithArray:symbolModels];
+    evaluation.symbols = [NSArray arrayWithArray:symbolModels];
     
     [evaluation shuffle];
     
