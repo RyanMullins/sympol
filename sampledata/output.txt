@@ -1,0 +1,100 @@
+[1] "Association Certainty"
+[1] "Symbol Name"
+[1] "Battlefield"
+[1] "SUM OF ALL"
+[1] 300
+[1] "MEAN"
+[1] 10
+
+
+
+[1] "Search Time"
+[1] "Symbol Name"
+[1] "Battlefield"
+[1] "SUM OF ALL"
+[1] "215.403087"
+[1] "MEAN"
+[1] "7.180103"
+
+
+
+[1] "Association Certainty"
+[1] "Symbol Name"
+[1] "Encampment"
+[1] "SUM OF ALL"
+[1] 300
+[1] "MEAN"
+[1] 10
+
+
+
+[1] "Search Time"
+[1] "Symbol Name"
+[1] "Encampment"
+[1] "SUM OF ALL"
+[1] "206.033978"
+[1] "MEAN"
+[1] "6.867799"
+
+
+
+[1] "Association Certainty"
+[1] "Symbol Name"
+[1] "Infantry"
+[1] "SUM OF ALL"
+[1] 300
+[1] "MEAN"
+[1] 10
+
+
+
+[1] "Search Time"
+[1] "Symbol Name"
+[1] "Infantry"
+[1] "SUM OF ALL"
+[1] "216.672669"
+[1] "MEAN"
+[1] "7.222422"
+
+
+
+[1] "Association Certainty"
+[1] "Symbol Name"
+[1] "Cavalry"
+[1] "SUM OF ALL"
+[1] 300
+[1] "MEAN"
+[1] 10
+
+
+
+[1] "Search Time"
+[1] "Symbol Name"
+[1] "Cavalry"
+[1] "SUM OF ALL"
+[1] "205.338475"
+[1] "MEAN"
+[1] "6.844616"
+
+
+
+[1] "Association Certainty"
+[1] "Symbol Name"
+[1] "Artillery"
+[1] "SUM OF ALL"
+[1] 300
+[1] "MEAN"
+[1] 10
+
+
+
+[1] "Search Time"
+[1] "Symbol Name"
+[1] "Artillery"
+[1] "SUM OF ALL"
+[1] "190.037785"
+[1] "MEAN"
+[1] "6.334593"
+
+
+
