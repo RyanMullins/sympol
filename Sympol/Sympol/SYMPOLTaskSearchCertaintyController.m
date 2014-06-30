@@ -18,7 +18,6 @@
 
 @implementation SYMPOLTaskSearchCertaintyController
 @synthesize certaintyLabel;
-@synthesize certaintyTextField;
 @synthesize submitButton;
 
 - (void) viewDidLoad {
@@ -35,13 +34,8 @@
 }
 
 - (IBAction) submitAnswer:(id)sender {
-    self.model.certainty = [NSNumber numberWithDouble:[[self.certaintyTextField text] doubleValue]];
+    self.model.certainty = [NSNumber numberWithFloat:[self.certaintySlider value]];
     [self performSegueWithIdentifier:SEGUE_UNWIND_EVALUATION sender:self];
-}
-
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end

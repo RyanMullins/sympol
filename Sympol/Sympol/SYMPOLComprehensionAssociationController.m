@@ -27,15 +27,6 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillHide)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -47,18 +38,6 @@
 
 - (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void) keyboardWillShow {
-    if (self.certaintyTextField.editing) {
-        [self adjustViewWithOffset:[self viewOriginOffset:self.certaintyTextField]];
-    }
-}
-
-- (void) keyboardWillHide {
-    if (self.certaintyTextField.editing) {
-        [self adjustViewWithOffset:-[self viewOriginOffset:self.certaintyTextField]];
-    }
 }
 
 - (void) adjustViewWithOffset:(NSInteger)offset {
@@ -81,7 +60,7 @@
 
 - (IBAction) associateMeaning:(id)sender {
     self.model.meaning = self.meaningTextView.text;
-    self.model.certainty = [NSNumber numberWithDouble:self.certaintyTextField.text.doubleValue];
+    self.model.certainty = [NSNumber numberWithFloat:[self.certaintySlider value]];
     [self.model associateMeaning];
     
     if (self.model.isLastSymbol) {
@@ -95,7 +74,7 @@
     [self.model prepareNextSymbol];
     [self.symbolImageView setImage:self.model.symbol.image];
     [self.meaningTextView setText:@"What meaning would you associate with this symbol?"];
-    [self.certaintyTextField setText:@""];
+    [self.certaintySlider setValue:3.0];
 }
 
 #pragma mark - UITextField Delegate Methods

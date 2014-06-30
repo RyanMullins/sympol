@@ -47,7 +47,7 @@ static SYMPOLEvaluationModel * evaluation = nil;
 - (void) experimentCompleted {
     [self.results addObject:[self.currentExperiment results]];
     
-    if (!self.isLastExperiment) {
+    if (![self isLastExperiment]) {
         self.indexOfCurrentExperiment++;
         self.currentExperiment = [self.experiments objectAtIndex:self.indexOfCurrentExperiment];
     }

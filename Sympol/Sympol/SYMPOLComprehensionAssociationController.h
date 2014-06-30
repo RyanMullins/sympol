@@ -10,12 +10,12 @@
 #import "SYMPOLEvaluationModel.h"
 #import "SYMPOLComprehensionAssociationModel.h"
 
-@interface SYMPOLComprehensionAssociationController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface SYMPOLComprehensionAssociationController : UIViewController <UITextViewDelegate>
 
 @property (nonatomic) IBOutlet UIButton * submitButton;
 @property (nonatomic) IBOutlet UILabel * rangeLabel;
 @property (nonatomic) IBOutlet UIImageView * symbolImageView;
-@property (nonatomic) IBOutlet UITextField * certaintyTextField;
+@property (nonatomic) IBOutlet UISlider * certaintySlider;
 @property (nonatomic) IBOutlet UITextView * meaningTextView;
 
 - (IBAction) associateMeaning:(id)sender;

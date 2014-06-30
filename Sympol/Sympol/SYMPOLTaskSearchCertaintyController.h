@@ -12,7 +12,7 @@
 
 @property (nonatomic) IBOutlet UIButton * submitButton;
 @property (nonatomic) IBOutlet UILabel * certaintyLabel;
-@property (nonatomic) IBOutlet UITextField * certaintyTextField;
+@property (nonatomic) IBOutlet UISlider * certaintySlider;
 
 - (IBAction) submitAnswer:(id)sender;
 

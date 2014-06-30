@@ -61,28 +61,31 @@
 }
 
 - (IBAction) unwindToEvaluation:(UIStoryboardSegue *)sender {
-    [self.evaluation experimentCompleted];
-    
-    if (self.evaluation.isLastExperiment) {
+    if ([self.evaluation isLastExperiment]) {
         if ([MFMailComposeViewController canSendMail]) {
             NSString * subject = [NSString stringWithFormat:@"Completed Evaluation - %@",
                                   [self.evaluation.evaulationInfo objectForKey:@"title"]];
-            NSString * message = @"Thank you for participating in this study. Please press the \"send\" button to end the evaluation and send the results away for analysis.";
+            NSString * message = @"Thank you for participating in this study. Please press the \"send\" button to end the evaluation and submit your responses.";
             NSString * filename = [NSString stringWithFormat:@"Results for %@ - %@",
                                    [self.evaluation.evaulationInfo objectForKey:@"title"],
                                    [NSDate date]];
-            NSData * results = [NSJSONSerialization dataWithJSONObject:[self.evaluation resultsJSONObject] options:NSJSONWritingPrettyPrinted error:nil];
+            NSData * results = [NSJSONSerialization dataWithJSONObject:[self.evaluation resultsJSONObject]
+                                                               options:NSJSONWritingPrettyPrinted
+                                                                 error:nil];
             
             MFMailComposeViewController * mailController = [[MFMailComposeViewController alloc] init];
             [mailController setMailComposeDelegate:self];
-            [mailController setToRecipients:@[[self.evaluation.evaulationInfo objectForKey:@"email"]]];
+            [mailController setToRecipients:@[(NSString* )[self.evaluation.evaulationInfo objectForKey:@"email"]]];
             [mailController setSubject:subject];
             [mailController setMessageBody:message isHTML:NO];
             [mailController addAttachmentData:results mimeType:@"application/json" fileName:filename];
+            [self presentViewController:mailController animated:YES completion:nil];
         } else  {
-            // TODO: Implement File (iCloud?) Syncing
+            [self.evaluation reset];
+            [self defaultTitlesAndDirections];
         }
     } else {
+        [self.evaluation experimentCompleted];
         [self updateTitlesAndDirections];
     }
 }

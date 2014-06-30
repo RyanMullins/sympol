@@ -141,11 +141,7 @@
     if ([view.annotation isKindOfClass:[SYMPOLSymbolModel class]]) {
         self.endTime = [NSDate date];
         self.model.elapsedTime = [NSNumber numberWithDouble:[self.endTime timeIntervalSinceDate:self.startTime]];
-        self.model.selectedSymbol = (SYMPOLSymbolModel *)view.annotation;
-        
-        NSLog(@"INFO: Set elapsed time to %@", self.model.elapsedTime);
-        NSLog(@"INFO: Set selected symbol to %@", [SYMPOLSymbolModel JSONObjectFromSymbol:self.model.selectedSymbol]);
-        
+        self.model.selectedSymbol = (SYMPOLSymbolModel *)view.annotation;        
         [self performSegueWithIdentifier:SEGUE_TASK_SEARCH_CERTAINTY sender:self];
     }
 }
