@@ -67,11 +67,31 @@
     CLLocationDegrees deltaX = maxCoordinate.longitude - minCoordinate.longitude;
     CLLocationDegrees deltaY = maxCoordinate.latitude - minCoordinate.latitude;
     
+    CGFloat width = self.map.frame.size.width;
+    CGFloat height = self.map.frame.size.height;
+    
+    NSInteger xCols = (NSInteger)(width / 30);
+    NSInteger yCols = (NSInteger)(height / 30);
+    
+    CLLocationDegrees gridCellX = deltaX / xCols;
+    CLLocationDegrees gridCellY = deltaY / yCols;
+    
+    NSMutableArray * coords = [NSMutableArray array];
+    
+    for (NSInteger xNum = 0; xNum < xCols; xNum++) {
+        for (NSInteger yNum = 0; yNum < yCols; yNum++) {
+            CLLocationDegrees lat = minCoordinate.latitude + (gridCellY * yNum);
+            CLLocationDegrees lon = minCoordinate.longitude + (gridCellX * (xNum + 1));
+            NSArray * coord = @[[NSNumber numberWithDouble:lat], [NSNumber numberWithDouble:lon]];
+            [coords addObject:coord];
+        }
+    }
+    
+    NSArray * shuffledcoords = [self shuffle:coords];
+    
     for (NSInteger i = 0; i <= [self.model.symbolsOnMap integerValue]; i++) {
         
         SYMPOLSymbolModel * symbol;
-        CLLocationDegrees lat = ((double)arc4random() / ARC4RANDOM_MAX) * (deltaY) + minCoordinate.latitude;
-        CLLocationDegrees lon = -((double)arc4random() / ARC4RANDOM_MAX) * (deltaX) + maxCoordinate.longitude;
         
         if (i < [self.model.symbolsOnMap integerValue]) {
             symbol = [self randomSymbol];
@@ -83,9 +103,29 @@
             symbol = self.model.targetSymbol;
         }
         
+        NSArray * coord = [shuffledcoords objectAtIndex:i];
+        
+        CLLocationDegrees xJitter = (arc4random_uniform(100) / 100) * (deltaX / (width / 6));
+        CLLocationDegrees yJitter = (arc4random_uniform(100) / 100) * (deltaY / (height / 6));
+        
+        CLLocationDegrees lat = [((NSNumber *)[coord objectAtIndex:0]) doubleValue] + yJitter;
+        CLLocationDegrees lon = [((NSNumber *)[coord objectAtIndex:1]) doubleValue] + xJitter;
         [symbol setCoordinate:CLLocationCoordinate2DMake(lat, lon)];
         [self.map addAnnotation:symbol];
     }
+}
+
+- (NSArray *) shuffle:(NSArray *)coords {
+    NSInteger count = [coords count];
+    NSMutableArray * shuffled = [NSMutableArray arrayWithArray:coords];
+    
+    for (NSUInteger i = 0; i < count; ++i) {
+        NSInteger remainingCount = count - i;
+        NSInteger exchangeIndex = i + arc4random_uniform(remainingCount);
+        [shuffled exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
+    }
+    
+    return [NSArray arrayWithArray:shuffled];
 }
 
 - (SYMPOLSymbolModel *) randomSymbol {
